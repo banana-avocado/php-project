@@ -1,0 +1,352 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	margin:0em;
+    height:100%;
+    background: linear-gradient(180deg, black, grey);
+	overflow-x:hidden;
+	color: white;
+}
+a{
+    color: #00b3fd;
+}
+a:hover{
+    color: #ff7d00;
+}
+
+#top {
+	white-space:nowrap;
+	font-family: 'Cinzel', sans-serif;
+	margin:0em;
+	background-image: url(tile/dark-grey-tile.png);
+	border-bottom: #00b3fd solid 4px;
+	position: relative;
+	min-height: 130px;
+	
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+	#top img{
+		float:left;
+		margin:0em;
+	}
+	#top h1 {
+		font-weight: 800;
+		float: left;
+		margin: 0em;
+		margin-top: 1em;
+	}
+	#top p {
+		position:relative;
+		top:0.85em;
+		margin:0em;
+	}
+	#top ul {
+		list-style-type:none;
+		clear:both;
+		padding: 0.25em 0em;
+		display: inline-block;
+		margin: 0px;
+    }
+	#top ul li {
+		display:inline;
+		margin:0em;
+		padding: 0.25em 1em;
+		margin-right:-4px;
+				
+		cursor:pointer;
+	}
+		#top ul li:hover {
+			border-bottom: #ff7d00 solid 4px !important;
+		}
+#nav {
+	margin: 0em;
+	padding: 0em;
+	width: 100%;
+	clear: both;
+	position: relative;
+	bottom: 0em;
+}
+#popupbutton{
+    margin: 0px;
+    float: right;
+	padding: 0.25em 1em;
+	
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	cursor:pointer;
+}
+#popupbutton:hover{
+	border-bottom: #ff7d00 solid 4px !important;
+	margin-bottom: -4px;
+}
+#nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.loginfield:focus ~ .padding, #popupbox:hover > .padding, #popupbutton:hover ~ #popupbox > .padding{
+	border-bottom: #ff7d00 solid 4px;
+    border-top: #00b3fd solid 4px;
+    transition: height 0.6s, padding 0.3s, border-bottom 0.3s, z-index 1s;
+    z-index: 0;
+    height: 3.5em;
+}
+#popupbox{
+    position: absolute;
+    bottom: -4px;
+    right: 83px;
+    display: inline-flex;
+    overflow: hidden;
+    float: right;
+    background: rgba(255, 255, 255, 0.2);
+}
+.loginfield{
+    margin-top: 0.15em;
+    width: 10em;
+    position: absolute;
+    top: 30px;
+    left:  5px;
+	z-index: 1;
+}
+.loginfield:nth-child(3){
+    margin-left: 11em;
+}
+.textflex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    padding-top: 0.3em;
+    position: absolute;
+    left:  5px;
+}
+.padding{
+    z-index: 2;
+    width: 300px;
+    height: 0em;
+    border-top: #00b3fd solid 0px;
+	border-bottom: #00b3fd solid 0px;
+    transition: height 0.6s, padding 0.3s, border-bottom 0.6s, border-top 1.2s, z-index 0s;
+    pointer-events: none;
+}
+#logoutbutton{
+    float: right;
+    margin: 0px;
+	padding: 0.25em 1em;
+	cursor:pointer;
+}
+#logoutbutton:hover{
+	border-top: #ff7d00 solid 4px !important;
+	margin-top: -4px;
+	color: #ff7d00;
+}
+#controllericons {
+    position: absolute;
+    top: 30px;
+}
+#controllericons img {
+    margin: 0.25em 0.5em;
+}
+.controllericon {
+    width: 32px;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+.controllericon:hover {
+    opacity: 1;
+    
+}
+#topcontent {
+	max-width: 80em;
+	margin: auto;
+	position: relative; 
+	bottom: 0; 
+	left: 0;
+	/*height: 130px;*/
+}
+#container {
+	overflow: hidden;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+#wrapper {
+	position: relative;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+}
+.page {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    background: linear-gradient(180deg, #262626, grey);
+	width: 80em;
+	max-width: 100%;
+	margin: auto;
+    height: 100%;
+    flex-grow: 1;
+    overflow-y: scroll;
+	}
+.flexContainer{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+.contentItem{
+    flex-grow: 1;
+}
+.content > * {
+	padding: 0.5em 1em;
+	margin: 0em 0em 0em 1em;
+}
+#streamwindow{
+    background-color: black;
+    width: 100%;
+    height: 504px;
+}
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    flex-direction: column;    
+}
+html {
+    height: 100%
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(150, 150, 150, 0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); 
+}
+
+@media screen and (max-width:80em) {
+	.content{
+		width: 100%;
+	}
+	#topcontent{
+		width: 100%;
+	}
+}
+#userControlling {
+    display: inline;
+    position: relative;
+}
+
+#takeControlButton {
+    display: inline;
+    position: relative;
+    padding: 0.25em 1em;
+    background-color: gray;
+	
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+	#loginPrompt {
+		display: inline;
+		position: relative;
+		padding: 0.25em 1em;
+		background-color: gray;
+		cursor: not-allowed;
+
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-o-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	#adminStopControlButton {
+		display: inline;
+		position: relative;
+		padding: 0.25em 1em;
+		background-color: #ff7d00;
+		cursor: pointer;
+		
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-o-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+.centerContent {
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+
+#takeControl {
+    float: right;
+    position: relative;
+    display: inline;
+    margin-top: 0.25em;
+}
+
+#loginForm {
+    display: inline;
+    float: right;
+}
+
+#loginArea {
+    display: inline;
+    float: right;
+}
+
+#newUserFeedback {
+    transition: color 0.5s;
+    opacity: 0;
+}
+
+.contentBox {
+    margin-right: 0.25em;
+    display: inline;
+    float: left;
+    height: 30em;
+    overflow-y: scroll;
+    //box-shadow: inset 0 0 10px #262626;
+    //border-radius: 5px;
+}
+
+
+#buttonArea {
+    display: inline;
+    position: relative;
+}
+
+#messageField {
+	float: right;
+	margin-top: 0.25em;
+}
