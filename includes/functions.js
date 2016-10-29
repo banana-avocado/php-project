@@ -31,6 +31,29 @@ function formToString(form){
 }
 */
 
+function check_controller_cfg(controller_cfg){
+    if (controller_cfg == 1){
+        //alert(1);
+        $(".controllericon").css("opacity", 0.3);
+        $("#c1").css("opacity", 1);
+    }
+    else if(controller_cfg == 2){
+        //alert(2);
+        $(".controllericon").css("opacity", 0.3);
+        $("#c2").css("opacity", 1);
+    }
+    else if(controller_cfg == 3){
+        //alert(3);
+        $(".controllericon").css("opacity", 0.3);
+        $("#c3").css("opacity", 1);
+    }
+}
+
+function set_controller_cfg(){
+
+
+}
+
 function loggedIn(admin){
 	$.ajax({
 		type: "GET",
