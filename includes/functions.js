@@ -123,3 +123,38 @@ function signoutClick(){
     //var resp=responseTextToData(ajax)['ajaxStatus'];
     loggedOut();
 }
+
+function search() {
+	//console.log($("#search").val().length);
+	//console.log($("#search").val());
+	//console.log("searched");
+	$.ajax({
+		type: "GET",
+		url: "includes/search.php",
+		data: {
+			search : $("#search").val()
+		}
+	})
+	.done(function(result){
+		//console.log(result);
+		result = JSON.parse(result);
+		if (result.length === 0)
+			var html = "No results found";
+		else{
+			var html = '<tr><th>Username</th><th>Expiration Date</th><th>Admin</th><th>Delete</th></tr>';
+			for (var i = 0; i < result.length; i++){
+				var partresult = result[i];
+				//console.log(partresult[0]);
+
+				if(partresult[2] == 1)
+					html += '<tr><td>' + partresult[0] + '</td><td>' + partresult[1] + "</td><td>" + "Yes" + "</td><td><button onclick=\"deleteUser('" + partresult[0] + "')\" disabled>Delete</button></td></tr>";
+				else
+					html += '<tr><td>' + partresult[0] + '</td><td>' + partresult[1] + "</td><td>" + "No" + "</td><td><button onclick=\"deleteUser('" + partresult[0] + "')\">Delete</button></td></tr>";
+
+			}
+		}
+		$("#results").html(html);
+	});
+
+}
+var autoSearch = window.setInterval(search, 10000);
